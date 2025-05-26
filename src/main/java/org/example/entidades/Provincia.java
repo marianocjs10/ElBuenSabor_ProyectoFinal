@@ -10,7 +10,7 @@ import org.example.Base;
 @Setter
 @ToString
 @SuperBuilder
-public class Provincia extends Base<Provincia, Long> {
+public class Provincia extends Base {
     private String nombre;
     private Pais pais;
 }

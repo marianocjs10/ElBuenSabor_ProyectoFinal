@@ -10,6 +10,6 @@ import org.example.Base;
 @Setter
 @SuperBuilder
 @ToString
-public class Imagen extends Base <Imagen, Long>{
+public class Imagen extends Base{
     private String denominacion;
 }

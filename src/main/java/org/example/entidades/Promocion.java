@@ -17,7 +17,7 @@ import java.util.Set;
 @Getter
 //@ToString
 @SuperBuilder
-public class Promocion extends Base<Promocion, Long> {
+public class Promocion extends Base {
     private String denominacion;
     private LocalDate fechaDesde;
     private LocalDate fechaHasta;

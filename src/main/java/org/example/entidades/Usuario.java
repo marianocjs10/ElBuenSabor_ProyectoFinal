@@ -10,7 +10,7 @@ import org.example.Base;
 @Setter
 @ToString
 @SuperBuilder
-public class Usuario extends Base<Usuario, Long> {
+public class Usuario extends Base {
     private String autoId;
     private String username;
 }

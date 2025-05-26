@@ -14,7 +14,7 @@ import java.util.Set;
 @Setter
 @ToString
 @SuperBuilder
-public abstract class Articulo extends Base<Articulo, Long> {
+public abstract class Articulo extends Base {
     protected String denominacion;
     private Double precioVenta;
     private UnidadMedida unidadMedida;

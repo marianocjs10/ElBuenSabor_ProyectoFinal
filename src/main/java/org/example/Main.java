@@ -16,6 +16,7 @@ import java.time.LocalTime;
 public class Main {
     public static void main(String[] args) {
         /*Conexion a la Base de Datos*/
+        /*
         try(Connection conn = DataBaseConnection.getConnection()){
             if(conn != null){
                 System.out.println("Conexión establecida con éxito.");
@@ -28,50 +29,51 @@ public class Main {
             //Manejo de errores en la conexión a la base de datos
             System.err.println("Error al conectar a la base de datos: "+e.getMessage());
             e.printStackTrace();//Imprime el stack trace completo para depuración
-        }
+        }*/
         /*------------------------------------------------------------------*/
+
         Empresa empresa = Empresa.builder()
-                .id(1L)
-                .estado(true)
+                //.id(1L)
+                //.estado(true)
                 .nombre("McHamburg")
                 .razonSocial("mchamburgSA")
                 .cuil(123456789)
                 .build();
 
         Pais argentina = Pais.builder()
-                .id(2L)
-                .estado(true)
+                //.id(2L)
+                //.estado(true)
                 .nombre("Argentina")
                 .build();
         Provincia mendoza = Provincia.builder()
-                .id(3L)
-                .estado(true)
+                //.id(3L)
+                //.estado(true)
                 .nombre("Mendoza")
                 .pais(argentina)
                 .build();
         Localidad ciudad = Localidad.builder()
-                .id(4L)
-                .estado(true)
+                //.id(4L)
+                //.estado(true)
                 .nombre("Ciudad")
                 .provincia(mendoza)
                 .build();
         Localidad godoyCruz = Localidad.builder()
-                .id(5L)
-                .estado(true)
+                //.id(5L)
+                //.estado(true)
                 .nombre("Godoy Cruz")
                 .provincia(mendoza)
                 .build();
         Domicilio domicilio1 = Domicilio.builder()
-                .id(6L)
-                .estado(true)
+                //.id(6L)
+                //.estado(true)
                 .calle("San Martin")
                 .numero(123)
                 .cp(5500)
                 .localidad(ciudad)
                 .build();
         Domicilio domicilio2 = Domicilio.builder()
-                .id(7L)
-                .estado(true)
+                //.id(7L)
+                //.estado(true)
                 .calle("Balcarce")
                 .numero(456)
                 .cp(5501)
@@ -79,16 +81,16 @@ public class Main {
                 .build();
 
         Sucursal sucursal1 = Sucursal.builder()
-                .id(8L)
-                .estado(true)
+                //.id(8L)
+                //.estado(true)
                 .nombre("Hamburg 1")
                 .horarioApertura(LocalTime.now())
                 .horarioCierre(LocalTime.now())
                 .domicilio(domicilio1)
                 .build();
         Sucursal sucursal2 = Sucursal.builder()
-                .id(9L)
-                .estado(true)
+                //.id(9L)
+                //.estado(true)
                 .nombre("Hamburg 2")
                 .horarioApertura(LocalTime.now())
                 .horarioCierre(LocalTime.now())
@@ -100,13 +102,13 @@ public class Main {
         /*---------------------------------------------------*/
 
         UnidadMedida gramos = UnidadMedida.builder()
-                .id(10L)
-                .estado(true)
+                //.id(10L)
+                //.estado(true)
                 .denominacion("gramos")
                 .build();
         ArticuloInsumo carne = ArticuloInsumo.builder()
-                .id(11L)
-                .estado(true)
+                //.id(11L)
+                //.estado(true)
                 .denominacion("Carne")
                 .precioVenta(15.00)
                 .precioCompra(10.00)
@@ -116,14 +118,14 @@ public class Main {
                 .unidadMedida(gramos)
                 .build();
         Imagen imagenCarne = Imagen.builder()
-                .id(12L)
-                .estado(true)
+                //.id(12L)
+                //.estado(true)
                 .denominacion("Imagen de carne")
                 .build();
         carne.addImagen(imagenCarne);
         ArticuloInsumo tomate = ArticuloInsumo.builder()
-                .id(13L)
-                .estado(true)
+                //.id(13L)
+                //.estado(true)
                 .denominacion("Tomate")
                 .precioVenta(3.00)
                 .precioCompra(2.5)
@@ -133,14 +135,14 @@ public class Main {
                 .unidadMedida(gramos)
                 .build();
         Imagen imagenTomate = Imagen.builder()
-                .id(14L)
-                .estado(true)
+                //.id(14L)
+                //.estado(true)
                 .denominacion("Imagen de tomate")
                 .build();
         tomate.addImagen(imagenTomate);
         ArticuloInsumo huevo = ArticuloInsumo.builder()
-                .id(15L)
-                .estado(true)
+                //.id(15L)
+                //.estado(true)
                 .denominacion("Huevo")
                 .precioVenta(5.5)
                 .precioCompra(5.00)
@@ -150,14 +152,14 @@ public class Main {
                 .unidadMedida(gramos)
                 .build();
         Imagen imagenHuevo = Imagen.builder()
-                .id(16L)
-                .estado(true)
+                // .id(16L)
+                //.estado(true)
                 .denominacion("Imagen de huevo")
                 .build();
         huevo.addImagen(imagenHuevo);
         ArticuloInsumo mayonesa = ArticuloInsumo.builder()
-                .id(17L)
-                .estado(true)
+                // .id(17L)
+                // .estado(true)
                 .denominacion("Mayonesa")
                 .precioVenta(5.0)
                 .precioCompra(4.5)
@@ -167,14 +169,14 @@ public class Main {
                 .unidadMedida(gramos)
                 .build();
         Imagen imagenMayonesa = Imagen.builder()
-                .id(18L)
-                .estado(true)
+                // .id(18L)
+                //.estado(true)
                 .denominacion("Imagen de mayonesa")
                 .build();
         mayonesa.addImagen(imagenMayonesa);
         ArticuloInsumo pan = ArticuloInsumo.builder()
-                .id(19L)
-                .estado(true)
+                // .id(19L)
+                // .estado(true)
                 .denominacion("Pan")
                 .precioVenta(15.0)
                 .precioCompra(13.0)
@@ -184,15 +186,15 @@ public class Main {
                 .unidadMedida(gramos)
                 .build();
         Imagen imagenPan = Imagen.builder()
-                .id(20L)
-                .estado(true)
+                // .id(20L)
+                // .estado(true)
                 .denominacion("Imagen de pan")
                 .build();
         pan.addImagen(imagenPan);
 
         ArticuloManufacturado hamburgMediana = ArticuloManufacturado.builder()
-                .id(21L)
-                .estado(true)
+                // .id(21L)
+                // .estado(true)
                 .denominacion("Mc Hamburg M")
                 .precioVenta(10000.00)
                 .descripcion("Hamburgesa mediana simple")
@@ -201,8 +203,8 @@ public class Main {
                 .unidadMedida(gramos)
                 .build();
         ArticuloManufacturado hamburgGrande = ArticuloManufacturado.builder()
-                .id(22L)
-                .estado(true)
+                //.id(22L)
+                // .estado(true)
                 .denominacion("Mc Hamburg G")
                 .precioVenta(18000.00)
                 .descripcion("Hamburgesa Grande")
@@ -212,62 +214,62 @@ public class Main {
                 .build();
 
         ArticuloManufacturadoDetalle carneDetalleM = ArticuloManufacturadoDetalle.builder()
-                .id(23L)
-                .estado(true)
+                // .id(23L)
+                // .estado(true)
                 .cantidad(150)
                 .articuloInsumo(carne)
                 .build();
         ArticuloManufacturadoDetalle carneDetalleG = ArticuloManufacturadoDetalle.builder()
-                .id(24L)
-                .estado(true)
+                //.id(24L)
+                //.estado(true)
                 .cantidad(300)
                 .articuloInsumo(carne)
                 .build();
         ArticuloManufacturadoDetalle tomateDetalleM = ArticuloManufacturadoDetalle.builder()
-                .id(25L)
-                .estado(true)
+                //.id(25L)
+                //.estado(true)
                 .cantidad(100)
                 .articuloInsumo(tomate)
                 .build();
         ArticuloManufacturadoDetalle tomateDetalleG = ArticuloManufacturadoDetalle.builder()
-                .id(26L)
-                .estado(true)
+                //.id(26L)
+                //.estado(true)
                 .cantidad(200)
                 .articuloInsumo(tomate)
                 .build();
         ArticuloManufacturadoDetalle huevoDetalleM = ArticuloManufacturadoDetalle.builder()
-                .id(27L)
-                .estado(true)
+                //.id(27L)
+                //.estado(true)
                 .cantidad(50)
                 .articuloInsumo(huevo)
                 .build();
         ArticuloManufacturadoDetalle huevoDetalleG = ArticuloManufacturadoDetalle.builder()
-                .id(28L)
-                .estado(true)
+                //.id(28L)
+                //.estado(true)
                 .cantidad(100)
                 .articuloInsumo(huevo)
                 .build();
         ArticuloManufacturadoDetalle mayonesaDetalleM = ArticuloManufacturadoDetalle.builder()
-                .id(29L)
-                .estado(true)
+                //.id(29L)
+                //.estado(true)
                 .cantidad(80)
                 .articuloInsumo(mayonesa)
                 .build();
         ArticuloManufacturadoDetalle mayonesaDetalleG = ArticuloManufacturadoDetalle.builder()
-                .id(30L)
-                .estado(true)
+                //.id(30L)
+                //.estado(true)
                 .cantidad(160)
                 .articuloInsumo(mayonesa)
                 .build();
         ArticuloManufacturadoDetalle panDetalleM = ArticuloManufacturadoDetalle.builder()
-                .id(31L)
-                .estado(true)
+                //.id(31L)
+                //.estado(true)
                 .cantidad(200)
                 .articuloInsumo(pan)
                 .build();
         ArticuloManufacturadoDetalle panDetalleG = ArticuloManufacturadoDetalle.builder()
-                .id(32L)
-                .estado(true)
+                //.id(32L)
+                //.estado(true)
                 .cantidad(300)
                 .articuloInsumo(pan)
                 .build();
@@ -278,8 +280,8 @@ public class Main {
         hamburgMediana.addDetalle(mayonesaDetalleM);
         hamburgMediana.addDetalle(panDetalleM);
         Imagen imagenHamburgM = Imagen.builder()
-                .id(33L)
-                .estado(true)
+                //.id(33L)
+                //.estado(true)
                 .denominacion("Imagen Mc Hamburg Mediana")
                 .build();
         hamburgMediana.addImagen(imagenHamburgM);
@@ -290,15 +292,15 @@ public class Main {
         hamburgGrande.addDetalle(mayonesaDetalleG);
         hamburgGrande.addDetalle(panDetalleG);
         Imagen imagenHamburgG = Imagen.builder()
-                .id(34L)
-                .estado(true)
+                //.id(34L)
+                //.estado(true)
                 .denominacion("Imagen Mc Hamburg Grande")
                 .build();
         hamburgGrande.addImagen(imagenHamburgG);
 
         Promocion promo1 = Promocion.builder()
-                .id(35L)
-                .estado(true)
+                //.id(35L)
+                //.estado(true)
                 .denominacion("Dos Mc Hamburg - 1 Mediana + 1 Grande")
                 .fechaDesde(LocalDate.now())
                 .fechaHasta(LocalDate.of(2025, 6, 30))
@@ -309,14 +311,14 @@ public class Main {
                 .tipoPromocion(TipoPromocion.PROMOCION1)
                 .build();
         Imagen imagenPromo1 = Imagen.builder()
-                .id(36L)
-                .estado(true)
+                //.id(36L)
+                //.estado(true)
                 .denominacion("Imagen de la promo1")
                 .build();
         promo1.addImagen(imagenPromo1);
         DetallePromocion promo1Detalle = DetallePromocion.builder()
-                .id(37L)
-                .estado(true)
+                //.id(37L)
+                //.estado(true)
                 .cantidad(1)
                 .subTotal(10000.00)
                 .articulo(hamburgMediana)
@@ -326,30 +328,30 @@ public class Main {
         sucursal1.addPromocion(promo1);
 
         Categoria hamburguesas = Categoria.builder()
-                .id(38L)
-                .estado(true)
+                //.id(38L)
+                //.estado(true)
                 .denominacion("Cat.: Hamburguesa")
                 .build();
         Categoria hamburguesaMediana = Categoria.builder()
-                .id(39L)
-                .estado(true)
+                // .id(39L)
+                //.estado(true)
                 .denominacion("Cat.: Hamburguesa Mediana")
                 .build();
         hamburguesaMediana.addArticulo(hamburgMediana);//Solo la subCategoria tiene Articulo
         Categoria hamburguesaGrande = Categoria.builder()
-                .id(40L)
-                .estado(true)
+                //.id(40L)
+                // .estado(true)
                 .denominacion("Cat.: Hamburguesa Grande")
                 .build();
         hamburguesaGrande.addArticulo(hamburgGrande);//Solo la subCategoria tiene Articulo
         Categoria subHamburguesaMediana1 = Categoria.builder()
-                .id(41L)
-                .estado(true)
+                //.id(41L)
+                //.estado(true)
                 .denominacion("Cat.: Hamburguesa con condimentos")
                 .build();
         Categoria subHamburguesaMediana2 = Categoria.builder()
-                .id(42L)
-                .estado(true)
+                //.id(42L)
+                //.estado(true)
                 .denominacion("Cat.: Hamburguesa sin condimentos")
                 .build();
 
@@ -365,15 +367,15 @@ public class Main {
         empresa.addSucursal(sucursal2);
         /* -------------------------------------------------------- */
         DetallePedido detallePedido1 = DetallePedido.builder()
-                .id(43L)
-                .estado(true)
+                //.id(43L)
+                //.estado(true)
                 .cantidad(2)
                 .articuloPedido(hamburgGrande)
                 .build();
         detallePedido1.calcularSubTotal();
         Factura factura1 = Factura.builder()
-                .id(44L)
-                .estado(true)
+                //.id(44L)
+                //.estado(true)
                 .fechaFacturacion(LocalDate.now())
                 .mpPaymentId(321)
                 .mpMerchantOrderId(12)
@@ -382,8 +384,8 @@ public class Main {
                 .formaPago(FormaPago.EFECTIVO)
                 .build();
         Pedido pedido1 = Pedido.builder()
-                .id(45L)
-                .estado(true)
+                //.id(45L)
+                //.estado(true)
                 .horaEstimadaFinalizacion(LocalTime.now())
                 .totalCosto(9000.0)
                 .estadoPedido(EstadoPedido.PREPARACION)
@@ -397,33 +399,33 @@ public class Main {
         pedido1.addDetallePedido(detallePedido1);
 
         Usuario usuario1= Usuario.builder()
-                .id(46L)
-                .estado(true)
+                //.id(46L)
+                //.estado(true)
                 .autoId("mdv")
                 .username("Mariano_mdv")
                 .build();
         ImagenCliente imagenCliente1 = ImagenCliente.builder()
-                .id(47L)
-                .estado(true)
+                //.id(47L)
+                //.estado(true)
                 .denominacion("Imagen del cliente1")
                 .build();
         Localidad maipu = Localidad.builder()
-                .id(48L)
-                .estado(true)
+                //.id(48L)
+                //.estado(true)
                 .nombre("Maipu")
                 .provincia(mendoza)
                 .build();
         Domicilio domicilioCliente1 = Domicilio.builder()
-                .id(49L)
-                .estado(true)
+                //.id(49L)
+                //.estado(true)
                 .calle("Capetillo")
                 .numero(null)
                 .cp(5515)
                 .localidad(maipu)
                 .build();
         Cliente cliente1 = Cliente.builder()
-                .id(50L)
-                .estado(true)
+                //.id(50L)
+                //.estado(true)
                 .nombre("Mariano")
                 .apellido("Videla")
                 .telefono("2613057839")

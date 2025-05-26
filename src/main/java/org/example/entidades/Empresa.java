@@ -11,7 +11,7 @@ import java.util.Set;
 @Setter
 //@ToString
 @SuperBuilder
-public class Empresa extends Base<Empresa, Long> {
+public class Empresa extends Base {
     private String nombre;
     private String razonSocial;
     private Integer cuil;

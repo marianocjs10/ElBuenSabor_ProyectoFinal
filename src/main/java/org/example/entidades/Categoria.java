@@ -14,7 +14,7 @@ import java.util.Set;
 @Getter
 //@ToString
 @SuperBuilder
-public class Categoria extends Base<Categoria, Long> {
+public class Categoria extends Base {
     private String denominacion;
     @ToString.Exclude
     private Categoria categoriasPadre;

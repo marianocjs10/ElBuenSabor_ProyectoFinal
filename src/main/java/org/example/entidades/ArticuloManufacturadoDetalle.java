@@ -10,7 +10,7 @@ import org.example.Base;
 @Setter
 //@ToString
 @SuperBuilder
-public class ArticuloManufacturadoDetalle extends Base<ArticuloManufacturadoDetalle, Long> {
+public class ArticuloManufacturadoDetalle extends Base {
     private Integer cantidad;
     private ArticuloInsumo articuloInsumo;
 

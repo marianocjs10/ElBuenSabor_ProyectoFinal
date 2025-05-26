@@ -16,7 +16,7 @@ import java.util.Set;
 @Setter
 //@ToString
 @SuperBuilder
-public class Cliente extends Base<Cliente, Long>{
+public class Cliente extends Base{
     private String nombre;
     private String apellido;
     private String telefono;

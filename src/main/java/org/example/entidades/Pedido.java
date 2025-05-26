@@ -19,7 +19,7 @@ import java.util.Set;
 @Setter
 //@ToString
 @SuperBuilder
-public class Pedido extends Base<Pedido, Long> {
+public class Pedido extends Base {
     private LocalTime horaEstimadaFinalizacion;
     private static Double total = 0.0;
     private Double totalCosto;

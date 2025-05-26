@@ -10,7 +10,7 @@ import org.example.Base;
 @Setter
 @Getter
 //@ToString
-public class DetallePromocion extends Base<DetallePromocion, Long> {
+public class DetallePromocion extends Base {
     private Integer cantidad;
     private Double subTotal;
     private Articulo articulo;

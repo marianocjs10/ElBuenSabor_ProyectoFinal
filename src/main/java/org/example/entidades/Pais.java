@@ -10,6 +10,6 @@ import org.example.Base;
 @Setter
 @ToString
 @SuperBuilder
-public class Pais extends Base<Pais, Long> {
+public class Pais extends Base {
     private String nombre;
 }

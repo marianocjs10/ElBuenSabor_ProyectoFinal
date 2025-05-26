@@ -15,7 +15,7 @@ import java.util.Set;
 @Setter
 //@ToString
 @SuperBuilder
-public class Sucursal extends Base<Sucursal, Long> {
+public class Sucursal extends Base {
     private String nombre;
     private LocalTime horarioApertura;
     private LocalTime horarioCierre;

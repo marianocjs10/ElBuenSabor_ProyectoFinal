@@ -10,6 +10,6 @@ import org.example.Base;
 @Setter
 @ToString
 @SuperBuilder
-public class UnidadMedida extends Base<UnidadMedida, Long> {
+public class UnidadMedida extends Base {
     private String denominacion;
 }
